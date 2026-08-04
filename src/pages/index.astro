@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation";
+import Banner from "../components/Banner";
+import FeatureSection from "../components/FeatureSection";
+import Footer from "../components/Footer";
+---
+
+<Layout title="Sorcerer's Bazaar - Example Landing Page">
+  <div class="min-h-screen bg-gray-900">
+    <Navigation client:idle />
+    <Banner client:visible />
+
+    <FeatureSection client:idle />
+
+    <section id="about" class="py-20 bg-brand-navy">
+      <div class="text-lg text-gray-300 max-w-4xl mx-auto text-left space-y-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-4xl font-bold text-white mb-8">
+            About <span class="text-brand-yellow font-serif">SORCERER'S BAZAAR</span>
+          </h2>
+        </div>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="font-bold text-white">What is the Sorcerer's Bazaar?</span>
+          <br />
+          Collections of formats, rules, meta commentary, and deck concepts for all types of Sorcery.
+        </div>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="font-bold text-white">Why should I care?</span>
+          <br />
+          The sorcerer's bazaar emphasises more eclectic formats such as, pauper, 2-headed giant, and cube, to expand your understanding of deck building and drafting, and breathe new life into playing with experienced and newer players atike.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</Layout>
